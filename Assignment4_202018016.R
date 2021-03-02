@@ -1,0 +1,14 @@
+  #1
+  dt=iris
+  #2
+  tab=table(dt$Sepal.Length,dt$Species)
+  tab
+  #3
+  df<-data.frame(tab)
+  df
+  dts<-subset(df,Var2=="setosa")
+  dtv<-subset(df,Var2=="versicolor")
+  dtvi<-subset(df,Var2=="virginica")
+  plot(dts$Freq,type="l",col="red",xlab=df$Var1)
+  lines(dtv$Freq,type="l",col="green",xlab=df$Var1)
+  lines(dtvi$Freq,type="l",col="blue",xlab=df$Var1)
